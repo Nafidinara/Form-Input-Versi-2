@@ -1,0 +1,67 @@
+.navbar-brand img{
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+}
+.carousel-item img{
+    height: 730px;
+}
+
+.img-table{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.img-table-berita{
+    width: 80px;
+    height: 60px;
+}
+
+.berita{
+    display: flex;
+    flex-direction: row !important;
+}
+
+.text-header{
+    top: 35%;
+}
+.text-header h1{
+    font-size: 72px;
+    font-weight: bold;
+}
+.text-header h5{
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.gambar-header{
+    filter: blur(1px) brightness(70%);
+}
+
+@media (max-width: 767.98px) {
+    .berita{
+        display: flex;
+        flex-direction: column!important;
+        text-align: center;
+    }
+    .card-kanan{
+        margin: 40px 80px 0px 80px;
+    }
+
+    .text-header h1{
+        font-size: 48px;
+        font-weight: bold;
+    }
+    .text-header h5{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .text-header h5{
+        display: none!important;
+    }
+}
+
