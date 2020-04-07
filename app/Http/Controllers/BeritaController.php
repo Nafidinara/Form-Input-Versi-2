@@ -26,7 +26,7 @@ class BeritaController extends Controller
 
     public function index_home()
     {
-        $data = Berita::paginate(5);
+        $data = Berita::paginate(3);
         return view('home.home',compact('data'));
     }
 
@@ -96,14 +96,19 @@ class BeritaController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy($berita_id)
     {
-        //
+        $data = Berita::where('berita_id',$berita_id)->first();
+        try {
+            DB::beginTransaction();
+            $data->delete();
+            DB::commit();
+            alert()->success('Berita berhasil di hapus!','Behasil broo!');
+            return redirect('berita/table');
+        }catch (Exception $exception){
+            DB::rollBack();
+            return redirect()->back()->with(['error' => 'Ooops, error:'.$exception->getMessage()]);
+        }
+
     }
 }

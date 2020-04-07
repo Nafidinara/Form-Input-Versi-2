@@ -39,7 +39,7 @@
                                 <td>{{$datas->updated_at}}</td>
                                 <td>
                                     <a href="{{url('berita/edit/'.$datas->berita_id)}}"><button class="btn"><i class="fa fa-pencil-square-o"></i></button></a>
-                                    <a href="{{url('download/'.$datas->berita_id)}}"><button class="btn"><i class="fa fa-trash"></i></button></a>
+                                    <a href="{{url('berita/hapus/'.$datas->berita_id)}}"><button class="btn"><i class="fa fa-trash"></i></button></a>
                                 </td>
                             </tr>
                         @endforeach

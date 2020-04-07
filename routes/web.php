@@ -24,6 +24,7 @@ Route::prefix('berita')->group(function () {
     Route::get('store','BeritaController@view_store');
     Route::post('proses-store','BeritaController@store');
     Route::get('edit/{berita_id}','BeritaController@show');
+    Route::get('hapus/{berita_id}','BeritaController@destroy');
     Route::get('detail/{berita_id}','BeritaController@show_detail');
     Route::post('proses-update/{berita_id}','BeritaController@update');
 });
